@@ -1,0 +1,16 @@
+from math import sqrt
+
+def check_lengths():
+    cost = 30
+    dip = 0
+    for i in range(10000):
+        i = float(i)
+        road = sqrt(25 + (i/2000)**2)
+        spec_cost = (road * 4) + (10 - (2 * i/2000))
+        # print i/2000, spec_cost
+        if spec_cost < cost:
+            cost = spec_cost
+            dip = i/2000
+    print cost, dip
+        
+check_lengths()
